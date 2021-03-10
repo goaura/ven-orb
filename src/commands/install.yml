@@ -16,5 +16,6 @@ steps:
   - run:
       name: Install ven
       command: |
+        export GOPRIVATE=github.com/vendrive
         go get github.com/vendrive/ven
         ven --version
