@@ -15,12 +15,8 @@ steps:
         terraform --version
   - run:
       name: Install ven
-      # what the f
       command: |
-        go env -w "GO111MODULE=on"
-        go env -w "GOPRIVATE=github.com/vendrive/*"
-        go env -w "GONOPROXY=github.com/vendrive/*"
-        go env -w "GONOSUMDB=github.com/vendrive/*"
-        go env
-        go get -u github.com/vendrive/ven
+        mkdir /tmp/ven
+        cd /tmp/ven
+        go install github.com/vendrive/ven@latest
         ven --version

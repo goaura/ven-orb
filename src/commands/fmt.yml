@@ -1,0 +1,7 @@
+description: >
+  Ensures the repository is formatted.
+
+steps:
+  - run:
+      name: ven fmt --check
+      command: ven fmt --check
