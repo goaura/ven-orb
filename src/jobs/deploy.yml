@@ -7,15 +7,57 @@ parameters:
   fingerprint:
     type: string
     description: "CircleCI SSH Fingerprint"
+  fmt:
+    type: boolean
+    default: false
+    description: "Run 'ven fmt' command"
+  test:
+    type: boolean
+    default: false
+    description: "Run 'ven test' command"
+  init:
+    type: boolean
+    default: false
+    description: "Run 'ven init' command"
+  deploy-consumers:
+    type: boolean
+    default: false
+    description: "Run 'ven deploy consumers' command"
+  deploy-infrastructure:
+    type: boolean
+    default: false
+    description: "Run 'ven deploy infrastructure' command"
+  deploy-service:
+    type: boolean
+    default: false
+    description: "Run 'ven deploy service' command"
 steps:
   - checkout
   - add_ssh_keys:
       fingerprints:
         - << parameters.fingerprint >>
   - install
-  - fmt
-  - test
-  - init
-  - deploy-consumers
-  - deploy-infrastructure
-  - deploy-service
+  - when:
+      condition: << parameters.fmt >>
+      steps:
+        - fmt
+  - when:
+      condition: << parameters.test >>
+      steps:
+        - test
+  - when:
+      condition: << parameters.init >>
+      steps:
+        - init
+  - when:
+      condition: << parameters.deploy-consumers >>
+      steps:
+        - deploy-consumers
+  - when:
+      condition: << parameters.deploy-infrastructure >>
+      steps:
+        - deploy-infrastructure
+  - when:
+      condition: << parameters.deploy-service >>
+      steps:
+        - deploy-service
