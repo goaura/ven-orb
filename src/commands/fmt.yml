@@ -3,6 +3,6 @@ description: >
 
 steps:
   - run:
-      name: ven fmt --check
+      name: ven fmt
       command: ven fmt --check
 

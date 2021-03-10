@@ -1,7 +1,11 @@
 description: >
   Initializes the repository (for Terraform)
 
+parameters:
+  stage:
+    type: string
+
 steps:
   - run:
-      name: ven --stage prod init
-      command: ven --stage prod init
+      name: ven init
+      command: ven --stage << parameters.stage >> init

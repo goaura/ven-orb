@@ -1,13 +1,21 @@
 description: >
-  Sample example description.
-# Provide a use-case based example for using this orb.
-# Everything in the `usage` section will be displayed in the orb registry.
-# Comments are not retained.
+  Deploy infrastructure and code
 usage:
   version: 2.1
   orbs:
-    <orb-name>: <namespace>/<orb-name>@1.2.3
+    ven: vendrive/ven@X.Y.Z
   workflows:
-    use-my-orb:
+    deploy:
       jobs:
-        - <orb-name>/<job-name>
+        - ven/deploy:
+            stage: prod
+            fmt: true
+            test: true
+            init: true
+            deploy-consumers: true
+            deploy-infrastructure: true
+            deploy-service: true
+            fingerprint: "SO:ME:FIN:G:ER:PR:IN:T"
+            filters:
+              branches:
+                only: main

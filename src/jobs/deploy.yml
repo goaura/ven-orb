@@ -48,16 +48,20 @@ steps:
   - when:
       condition: << parameters.init >>
       steps:
-        - init
+        - init:
+            stage: << parameters.stage >>
   - when:
       condition: << parameters.deploy-consumers >>
       steps:
-        - deploy-consumers
+        - deploy-consumers:
+            stage: << parameters.stage >>
   - when:
       condition: << parameters.deploy-infrastructure >>
       steps:
-        - deploy-infrastructure
+        - deploy-infrastructure:
+            stage: << parameters.stage >>
   - when:
       condition: << parameters.deploy-service >>
       steps:
-        - deploy-service
+        - deploy-service:
+            stage: << parameters.stage >>

@@ -1,7 +1,11 @@
 description: >
   Deploys consumer Lambdas
 
+parameters:
+  stage:
+    type: string
+
 steps:
   - run:
-      name: ven --stage prod deploy consumers
-      command: ven --stage prod deploy consumers
+      name: ven deploy consumers
+      command: ven --stage << parameters.stage >> deploy consumers
