@@ -15,7 +15,7 @@ steps:
         terraform --version
   - run:
       name: Install ven
-      ### command: |
+      ###### command: |
       #   cd /tmp
       #   git clone git@github.com:vendrive/ven.git
       #   cd ven
