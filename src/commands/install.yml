@@ -15,7 +15,7 @@ steps:
         terraform --version
   - run:
       name: Install ven
-      # what
+      # what the
       command: |
         go env -w "GO111MODULE=on"
         go env -w "GOPRIVATE=github.com/vendrive/*"
