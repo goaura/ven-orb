@@ -1,0 +1,7 @@
+description: >
+  Checks formatting and tests code and infrastructure
+
+executor: default
+
+steps:
+  - fmt
