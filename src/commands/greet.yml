@@ -10,4 +10,4 @@ parameters:
 steps:
   - run:
       name: Hello Greeting
-      command: echo $<<parameters.account-url>>
+      command: echo $<<parameters.to>>
