@@ -26,7 +26,7 @@ jobs:
       - ven/install
 
 workflows:
-  test-pack:
+  deploy:
     unless: << pipeline.parameters.run-integration-tests >>
     jobs:
       - orb-tools/lint
