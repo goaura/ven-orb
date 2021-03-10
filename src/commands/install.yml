@@ -16,7 +16,9 @@ steps:
   - run:
       name: Install ven
       command: |
-        go env
         go env -w "GOPRIVATE=github.com/vendrive/*"
+        go env -w "GONOPROXY=github.com/vendrive/*"
+        go env -w "GONOSUMDB=github.com/vendrive/*"
+        go env
         go get github.com/vendrive/ven
         ven --version
