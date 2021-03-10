@@ -1,0 +1,10 @@
+description: >
+  Installs 'ven' and dependencies.
+
+steps:
+  - run:
+      name: Install ven
+      command: go install github.com/vendrive/ven@latest
+  - run:
+      name: Install terraform
+      command: go install github.com/hashicorp/terraform@latest

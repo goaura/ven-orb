@@ -1,0 +1,14 @@
+description: >
+  Installs 'ven' and dependencies.
+
+executor: default
+
+parameters:
+  fingerprint:
+    type: string
+    description: "CircleCI SSH Fingerprint"
+steps:
+  - add_ssh_keys:
+      fingerprints:
+        - << parameters.fingerprint >>
+  - install

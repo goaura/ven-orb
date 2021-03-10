@@ -15,6 +15,14 @@ parameters:
     type: string
     default: "dev:alpha"
 
+integration-test-1:
+    docker:
+      - image: ven/default
+    steps:
+      - checkout
+      - ven/install:
+          fingerprint: '40:cb:ca:da:18:5e:a7:f8:29:2b:c5:3c:ed:0f:22:95'
+
 workflows:
   test-pack:
     unless: << pipeline.parameters.run-integration-tests >>
