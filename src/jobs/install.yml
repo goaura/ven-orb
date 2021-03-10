@@ -8,6 +8,7 @@ parameters:
     type: string
     description: "CircleCI SSH Fingerprint"
 steps:
+  - checkout
   - add_ssh_keys:
       fingerprints:
         - << parameters.fingerprint >>
