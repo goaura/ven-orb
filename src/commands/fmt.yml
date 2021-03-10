@@ -1,5 +1,5 @@
 description: >
-  Ensures the repository is formatted.
+  Ensures the repository is formatted
 
 steps:
   - run:

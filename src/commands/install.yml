@@ -1,5 +1,5 @@
 description: >
-  Installs 'ven' and dependencies.
+  Installs 'ven' and dependencies
 
 steps:
   - run:
