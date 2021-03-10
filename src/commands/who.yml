@@ -1,0 +1,7 @@
+description: >
+  Prints the AWS role ARN used
+
+steps:
+  - run:
+      name: ven who
+      command: ven who

@@ -19,9 +19,3 @@ steps:
         go env -w "GOPRIVATE=github.com/vendrive/*"
         go install github.com/vendrive/ven@latest
         ven --version
-  - run:
-      name: Check ENV VARS
-      command: |
-        echo $AWS_ACCESS_KEY_ID
-        echo $AWS_SECRET_ACCESS_KEY
-        echo $AWS_DEFAULT_REGION
