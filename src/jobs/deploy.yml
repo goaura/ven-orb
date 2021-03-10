@@ -67,5 +67,6 @@ steps:
       condition: << parameters.deploy-service >>
       steps:
         - setup_remote_docker
+            version: '20.10.2'
         - deploy-service:
             stage: << parameters.stage >>
