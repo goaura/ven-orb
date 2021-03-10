@@ -1,8 +1,6 @@
 # Orb Project Template
-<!---
-[![CircleCI Build Status](https://circleci.com/gh/vendrive/ven-orb.svg?style=shield "CircleCI Build Status")](https://circleci.com/gh/vendrive/ven-orb) [![CircleCI Orb Version](https://img.shields.io/badge/endpoint.svg?url=https://badges.circleci.io/orb/vendrive/ven-orb)](https://circleci.com/orbs/registry/orb/vendrive/ven) [![GitHub License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/vendrive/ven-orb/master/LICENSE) [![CircleCI Community](https://img.shields.io/badge/community-CircleCI%20Discuss-343434.svg)](https://discuss.circleci.com/c/ecosystem/orbs)
 
---->
+[![CircleCI Build Status](https://circleci.com/gh/vendrive/ven-orb.svg?style=shield "CircleCI Build Status")](https://circleci.com/gh/vendrive/ven-orb) [![CircleCI Orb Version](https://img.shields.io/badge/endpoint.svg?url=https://badges.circleci.io/orb/vendrive/ven-orb)](https://circleci.com/orbs/registry/orb/vendrive/ven) [![GitHub License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/vendrive/ven-orb/master/LICENSE) [![CircleCI Community](https://img.shields.io/badge/community-CircleCI%20Discuss-343434.svg)](https://discuss.circleci.com/c/ecosystem/orbs)
 
 A starter template for orb projects. Build, test, and publish orbs automatically on CircleCI with [Orb-Tools](https://circleci.com/orbs/registry/orb/circleci/orb-tools).
 
