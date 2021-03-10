@@ -16,6 +16,7 @@ steps:
   - run:
       name: Install ven
       command: |
+        go env
         go env -w "GOPRIVATE=github.com/vendrive/*"
         go get github.com/vendrive/ven
         ven --version
