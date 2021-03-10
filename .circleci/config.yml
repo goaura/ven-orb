@@ -20,9 +20,11 @@ jobs:
     docker:
       - image: ven/default
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - '40:cb:ca:da:18:5e:a7:f8:29:2b:c5:3c:ed:0f:22:95'
       - checkout
-      - ven/install:
-          fingerprint: '40:cb:ca:da:18:5e:a7:f8:29:2b:c5:3c:ed:0f:22:95'
+      - ven/install
 
 workflows:
   test-pack:
