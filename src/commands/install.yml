@@ -20,7 +20,7 @@ steps:
         go env -w "GOPRIVATE=github.com/vendrive/*"
         go install github.com/vendrive/ven@latest
         ven --version
-      ### command: |
+      #### command: |
       #   cd /tmp
       #   git clone git@github.com:vendrive/ven.git
       #   cd ven
