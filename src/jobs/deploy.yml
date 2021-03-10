@@ -1,5 +1,5 @@
 description: >
-  Installs 'ven' and dependencies.
+  Deploys code and infrastructure
 
 executor: default
 
@@ -13,3 +13,9 @@ steps:
       fingerprints:
         - << parameters.fingerprint >>
   - install
+  - fmt
+  - test
+  - init
+  - deploy-consumers
+  - deploy-infrastructure
+  - deploy-service

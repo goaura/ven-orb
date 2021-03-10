@@ -1,0 +1,7 @@
+description: >
+  Deploys Infrastructure
+
+steps:
+  - run:
+      name: ven --stage prod deploy service --extra-tag ${CIRCLE_SHA1}
+      command: ven --stage prod deploy service --extra-tag ${CIRCLE_SHA1}

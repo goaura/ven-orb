@@ -1,0 +1,7 @@
+description: >
+  Tests code and infrastructure
+
+steps:
+  - run:
+      name: ven test
+      command: ven test

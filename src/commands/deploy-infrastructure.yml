@@ -1,0 +1,7 @@
+description: >
+  Deploys Infrastructure
+
+steps:
+  - run:
+      name: ven --stage prod deploy infrastructure
+      command: ven --stage prod deploy infrastructure

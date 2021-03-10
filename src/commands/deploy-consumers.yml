@@ -1,0 +1,7 @@
+description: >
+  Deploys consumer Lambdas
+
+steps:
+  - run:
+      name: ven --stage prod deploy consumers
+      command: ven --stage prod deploy consumers

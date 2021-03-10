@@ -1,0 +1,7 @@
+description: >
+  Initializes the repository (for Terraform)
+
+steps:
+  - run:
+      name: ven --stage prod init 
+      command: ven --stage prod init
