@@ -15,14 +15,6 @@ parameters:
     type: string
     default: "dev:alpha"
 
-jobs:
-  integration-test-1:
-    docker:
-      - image: cimg/base:stable
-    steps:
-      - checkout
-      - ven/greet
-
 workflows:
   test-pack:
     unless: << pipeline.parameters.run-integration-tests >>
@@ -42,15 +34,12 @@ workflows:
   integration-test_deploy:
     when: << pipeline.parameters.run-integration-tests >>
     jobs:
-      - integration-test-1
       - orb-tools/dev-promote-prod-from-commit-subject:
           orb-name: vendrive/ven
           context: orb-publishing
           add-pr-comment: false
           fail-if-semver-not-indicated: true
           publish-version-tag: false
-          requires:
-            - integration-test-1
           filters:
             branches:
               only:
