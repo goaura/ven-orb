@@ -12,7 +12,9 @@ steps:
         curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
         sudo apt-add-repository "deb [arch=$(dpkg --print-architecture)] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
         sudo apt install terraform
+        terraform --version
   - run:
       name: Install ven
-      # command: go install github.com/vendrive/ven@latest
-      command: cd src; git clone git@github.com:vendrive/ven.git
+      command: |
+        go get github.com/vendrive/ven
+        ven --version
