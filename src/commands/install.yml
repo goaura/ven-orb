@@ -17,6 +17,7 @@ steps:
       name: Install ven
       # Not sure why 'go install github.com/vendrive/ven@latest' doesn't work
       command: |
+        go env -w "GOPRIVATE=github.com/vendrive/*"
         go install github.com/vendrive/ven@latest
         ven --version
       ### command: |
