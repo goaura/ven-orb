@@ -66,5 +66,6 @@ steps:
   - when:
       condition: << parameters.deploy-service >>
       steps:
+        - setup_remote_docker
         - deploy-service:
             stage: << parameters.stage >>

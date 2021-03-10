@@ -8,4 +8,4 @@ parameters:
 steps:
   - run:
       name: ven deploy infrastructure
-      command: ven --stage << parameters.stage >> deploy infrastructure --dryrun
+      command: ven --stage << parameters.stage >> deploy infrastructure
