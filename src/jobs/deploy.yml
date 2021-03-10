@@ -45,14 +45,14 @@ steps:
       steps:
         - fmt
   - when:
-      condition: << parameters.test >>
-      steps:
-        - test
-  - when:
       condition: << parameters.init >>
       steps:
         - init:
             stage: << parameters.stage >>
+  - when:
+      condition: << parameters.test >>
+      steps:
+        - test
   - when:
       condition: << parameters.deploy-consumers >>
       steps:
