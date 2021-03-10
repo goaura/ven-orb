@@ -4,6 +4,9 @@ description: >
 executor: default
 
 parameters:
+  stage:
+    type: string
+    description: "Stage to run commands against"
   fingerprint:
     type: string
     description: "CircleCI SSH Fingerprint"
