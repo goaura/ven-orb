@@ -3,6 +3,9 @@ description: >
 
 steps:
   - run:
+      name: Configure git
+      command: git config --global url.ssh://git@github.com/.insteadOf https://github.com/
+  - run:
       name: Install terraform
       # From https://www.terraform.io/docs/cli/install/apt.html
       command: |
