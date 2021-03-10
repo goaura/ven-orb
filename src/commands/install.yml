@@ -22,5 +22,5 @@ steps:
         go env -w "GONOPROXY=github.com/vendrive/*"
         go env -w "GONOSUMDB=github.com/vendrive/*"
         go env
-        go get github.com/vendrive/ven
+        go get -u github.com/vendrive/ven
         ven --version
