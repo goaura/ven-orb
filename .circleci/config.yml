@@ -15,7 +15,8 @@ parameters:
     type: string
     default: "dev:alpha"
 
-integration-test-1:
+jobs:
+  integration-test-1:
     docker:
       - image: ven/default
     steps:
