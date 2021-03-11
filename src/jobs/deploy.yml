@@ -9,6 +9,7 @@ parameters:
     description: "Stage to run commands against"
   fingerprint:
     type: string
+    default: ''
     description: "CircleCI SSH Fingerprint"
   fmt:
     type: boolean
@@ -36,9 +37,12 @@ parameters:
     description: "Run 'ven deploy service' command"
 steps:
   - checkout
-  - add_ssh_keys:
-      fingerprints:
-        - << parameters.fingerprint >>
+  - when:
+      condition: << parameters.fingerprint >>
+      steps:
+        - add_ssh_keys:
+            fingerprints:
+              - << parameters.fingerprint >>
   - install
   - when:
       condition: << parameters.fmt >>
