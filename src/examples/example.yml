@@ -15,6 +15,7 @@ usage:
             deploy-consumers: true
             deploy-infrastructure: true
             deploy-service: true
+            test-integration: true
             fingerprint: "SO:ME:FIN:G:ER:PR:IN:T"
             filters:
               branches:

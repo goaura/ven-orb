@@ -35,6 +35,10 @@ parameters:
     type: boolean
     default: false
     description: "Run 'ven deploy service' command"
+  test-integration:
+    type: boolean
+    default: false
+    description: "Run 'ven test integration' command"
 steps:
   - checkout
   - when:
@@ -74,3 +78,7 @@ steps:
             version: '20.10.2'
         - deploy-service:
             stage: << parameters.stage >>
+  - when:
+      condition: << parameters.test-integration >>
+      steps:
+        - test-integration

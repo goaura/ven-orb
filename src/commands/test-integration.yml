@@ -1,0 +1,7 @@
+description: >
+  Runs integration tests
+
+steps:
+  - run:
+      name: ven test integration
+      command: ven test integration
