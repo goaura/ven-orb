@@ -1,0 +1,11 @@
+description: >
+  Deploys Integration Tests
+
+parameters:
+  stage:
+    type: string
+
+steps:
+  - run:
+      name: ven deploy integration_tests
+      command: ven --stage << parameters.stage >> deploy integration_tests
