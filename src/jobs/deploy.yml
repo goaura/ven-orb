@@ -43,6 +43,10 @@ parameters:
     type: boolean
     default: false
     description: "Run 'ven test integration' command"
+  slack-notify:
+    type: boolean
+    default: false
+    description: "Notify slack on success and failure"
 steps:
   - checkout
   - when:
@@ -91,3 +95,7 @@ steps:
       condition: << parameters.test-integration >>
       steps:
         - test-integration
+  - when:
+      condition: << parameters.slack-notify >>
+      steps:
+        - slack-notify
