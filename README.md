@@ -20,11 +20,6 @@
 | patch     | Issue a x.x.1 incremented release|
 | skip      | Do not issue a release|
 
-Example: `[semver:major]`
-
-* Squash and merge. Ensure the semver tag is preserved and entered as a part of the commit message.
-* On merge, after manual approval, the orb will automatically be published to the Orb Registry.
-
 Example commit message:
 
 ```
