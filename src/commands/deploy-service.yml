@@ -8,4 +8,6 @@ parameters:
 steps:
   - run:
       name: ven deploy service
-      command: ven --stage << parameters.stage >> deploy service --extra-tag ${CIRCLE_SHA1}
+      command: |
+        export DOCKER_BUILDKIT=1
+        ven --stage << parameters.stage >> deploy service --extra-tag ${CIRCLE_SHA1}
