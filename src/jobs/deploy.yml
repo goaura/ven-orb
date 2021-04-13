@@ -23,10 +23,10 @@ parameters:
     type: boolean
     default: false
     description: "Run 'ven init' command"
-  deploy-consumers:
+  deploy-lambdas:
     type: boolean
     default: false
-    description: "Run 'ven deploy consumers' command"
+    description: "Run 'ven deploy lambdas' command"
   deploy-integration-tests:
     type: boolean
     default: false
@@ -70,9 +70,9 @@ steps:
       steps:
         - test
   - when:
-      condition: << parameters.deploy-consumers >>
+      condition: << parameters.deploy-lambdas >>
       steps:
-        - deploy-consumers:
+        - deploy-lambdas:
             stage: << parameters.stage >>
   - when:
       condition: << parameters.deploy-integration-tests >>

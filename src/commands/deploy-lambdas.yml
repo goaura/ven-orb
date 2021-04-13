@@ -1,0 +1,11 @@
+description: >
+  Deploys Lambdas
+
+parameters:
+  stage:
+    type: string
+
+steps:
+  - run:
+      name: ven deploy lambdas
+      command: ven --stage << parameters.stage >> deploy lambdas

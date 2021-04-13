@@ -12,7 +12,7 @@ usage:
             fmt: true
             test: true
             init: true
-            deploy-consumers: true
+            deploy-lambdas: true
             deploy-infrastructure: true
             deploy-service: true
             test-integration: true
