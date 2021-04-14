@@ -13,7 +13,9 @@ usage:
             test: true
             init: true
             deploy-lambdas: true
+            deploy-integration-tests: true
             deploy-infrastructure: true
+            deploy-schema: true
             deploy-service: true
             test-integration: true
             fingerprint: "SO:ME:FIN:G:ER:PR:IN:T"

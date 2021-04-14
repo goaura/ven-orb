@@ -35,6 +35,10 @@ parameters:
     type: boolean
     default: false
     description: "Run 'ven deploy infrastructure' command"
+  deploy-schema:
+    type: boolean
+    default: false
+    description: "Run 'ven deploy schema' command"
   deploy-service:
     type: boolean
     default: false
@@ -83,6 +87,11 @@ steps:
       condition: << parameters.deploy-infrastructure >>
       steps:
         - deploy-infrastructure:
+            stage: << parameters.stage >>
+  - when:
+      condition: << parameters.deploy-schema >>
+      steps:
+        - deploy-schema:
             stage: << parameters.stage >>
   - when:
       condition: << parameters.deploy-service >>

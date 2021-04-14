@@ -1,0 +1,11 @@
+description: >
+  Deploys Schema Migrations
+
+parameters:
+  stage:
+    type: string
+
+steps:
+  - run:
+      name: ven deploy schema
+      command: ven --stage << parameters.stage >> deploy schema
