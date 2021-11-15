@@ -19,3 +19,7 @@ steps:
         go env -w "GOPRIVATE=github.com/vendrive/*"
         go install github.com/vendrive/ven@latest
         ven --version
+  - run:
+      name: Install Auth0 Deploy CLI
+      command: npm i -g auth0-deploy-cli
+
