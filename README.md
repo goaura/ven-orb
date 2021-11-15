@@ -31,3 +31,20 @@ Example commit message:
 ```
 circleci orb pack src
 ```
+
+### Known Issues
+
+If you see the following error:
+
+```
+The dev version of vendrive/ven@dev:alpha has expired. Dev versions of orbs are only valid for 90 days after publishing.
+```
+
+Do the following:
+
+```
+circleci orb pack src | circleci orb validate -
+circleci orb pack src | circleci orb publish - vendrive/ven@dev:alpha
+```
+
+And push again
